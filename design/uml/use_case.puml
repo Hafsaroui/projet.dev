@@ -1,0 +1,42 @@
+@startuml
+title Use Case Diagram - e-Caution (version simplifiée)
+
+left to right direction
+skinparam actorStyle awesome
+
+actor Acheteur
+actor Vendeur
+actor Administrateur
+
+rectangle "Plateforme e-Caution" {
+
+  ' Cas d’usage communs
+  usecase UC1 as "S'inscrire / Se connecter"
+  usecase UC2 as "Consulter les enchères"
+
+  ' Acheteur
+  usecase UC3 as "Participer à une enchère"
+  usecase UC4 as "Payer l'enchère gagnée"
+
+  ' Vendeur
+  usecase UC5 as "Publier une enchère"
+
+  ' Admin
+  usecase UC6 as "Modérer les enchères"
+}
+
+' Relations Acheteur
+Acheteur --> UC1
+Acheteur --> UC2
+Acheteur --> UC3
+Acheteur --> UC4
+
+' Relations Vendeur
+Vendeur --> UC1
+Vendeur --> UC5
+
+' Relations Admin
+Administrateur --> UC1
+Administrateur --> UC6
+
+@enduml

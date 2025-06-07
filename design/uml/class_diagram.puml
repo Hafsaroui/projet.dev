@@ -1,0 +1,125 @@
+@startuml
+' ================================
+' Class Diagram
+' ================================
+
+class Utilisateur {
+  +id: UUID
+  +nom: String
+  +email: String
+  +motDePasse: String
+  +role: String <<Acheteur/Vendeur/Admin>>
+  +dateInscription: Date
+}
+
+class Profil {
+  +id: UUID
+  +utilisateurId: UUID
+  +photo: String
+  +bio: String
+  +adresse: String
+}
+
+class Enchere {
+  +id: UUID
+  +titre: String
+  +description: String
+  +prixInitial: Float
+  +dateDebut: DateTime
+  +dateFin: DateTime
+  +vendeurId: UUID
+}
+
+class Mise {
+  +id: UUID
+  +enchereId: UUID
+  +acheteurId: UUID
+  +montant: Float
+  +date: DateTime
+}
+
+class Paiement {
+  +id: UUID
+  +utilisateurId: UUID
+  +montant: Float
+  +date: DateTime
+  +type: String
+}
+
+class Notification {
+  +id: UUID
+  +utilisateurId: UUID
+  +message: String
+  +date: DateTime
+  +lu: Boolean
+}
+
+Utilisateur "1" -- "1" Profil
+Utilisateur "1" -- "*" Enchere : crée
+Utilisateur "1" -- "*" Mise : participe
+Utilisateur "1" -- "*" Paiement
+Utilisateur "1" -- "*" Notification
+Enchere "1" -- "*" Mise
+@enduml@startuml
+' ================================
+' Class Diagram
+' ================================
+
+class Utilisateur {
+  +id: UUID
+  +nom: String
+  +email: String
+  +motDePasse: String
+  +role: String <<Acheteur/Vendeur/Admin>>
+  +dateInscription: Date
+}
+
+class Profil {
+  +id: UUID
+  +utilisateurId: UUID
+  +photo: String
+  +bio: String
+  +adresse: String
+}
+
+class Enchere {
+  +id: UUID
+  +titre: String
+  +description: String
+  +prixInitial: Float
+  +dateDebut: DateTime
+  +dateFin: DateTime
+  +vendeurId: UUID
+}
+
+class Mise {
+  +id: UUID
+  +enchereId: UUID
+  +acheteurId: UUID
+  +montant: Float
+  +date: DateTime
+}
+
+class Paiement {
+  +id: UUID
+  +utilisateurId: UUID
+  +montant: Float
+  +date: DateTime
+  +type: String
+}
+
+class Notification {
+  +id: UUID
+  +utilisateurId: UUID
+  +message: String
+  +date: DateTime
+  +lu: Boolean
+}
+
+Utilisateur "1" -- "1" Profil
+Utilisateur "1" -- "*" Enchere : crée
+Utilisateur "1" -- "*" Mise : participe
+Utilisateur "1" -- "*" Paiement
+Utilisateur "1" -- "*" Notification
+Enchere "1" -- "*" Mise
+@enduml

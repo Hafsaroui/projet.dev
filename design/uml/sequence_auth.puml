@@ -1,0 +1,25 @@
+@startuml
+' ================================
+' Sequence Diagram - Processus d'enchère
+' ================================
+
+participant Acheteur
+participant InterfaceWeb
+participant SupabaseAuth
+participant SupabaseDB
+participant NotificationService
+
+Acheteur -> InterfaceWeb : Se connecter
+InterfaceWeb -> SupabaseAuth : Authentifier(email, mdp)
+SupabaseAuth --> InterfaceWeb : Token + UserID
+
+Acheteur -> InterfaceWeb : Consulter enchère
+InterfaceWeb -> SupabaseDB : fetch enchères
+SupabaseDB --> InterfaceWeb : liste enchères
+
+Acheteur -> InterfaceWeb : Faire une mise
+InterfaceWeb -> SupabaseDB : insert(Mise)
+SupabaseDB -> NotificationService : notifier Vendeur
+NotificationService -> Vendeur : Nouvelle mise reçue
+SupabaseDB --> InterfaceWeb : succès
+@enduml

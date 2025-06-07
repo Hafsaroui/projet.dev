@@ -10,7 +10,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <HeroSection />
 
-      {/* Features Section */}
+     {/* Features Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

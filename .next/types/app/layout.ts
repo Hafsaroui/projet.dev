@@ -1,4 +1,4 @@
-// File: C:\Users\Asus\Downloads\ecaution-marketplace\app\layout.js
+// File: C:\Users\hp\Documents\projet.dev\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

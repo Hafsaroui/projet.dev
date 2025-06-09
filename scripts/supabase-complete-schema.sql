@@ -1,4 +1,4 @@
-- eCaution Database Schema pour Supabase
+-- eCaution Database Schema pour Supabase
 -- Script complet pour créer toutes les tables dans Supabase
 
 -- Enable extensions nécessaires

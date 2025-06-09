@@ -57,10 +57,14 @@ npm run dev
 - `npm run start` - Lance l'application en production
 - `npm run lint` - Vérifie le code avec ESLint
 
+## 🔗 Liens Utiles
+
+- [Documentation](docs/)
+- [API Reference](docs/api.md)
+- [Guide de Contribution](CONTRIBUTING.md)
+
 ## 👥 Auteurs
 
-- hafsa rouijel
-- manal chemlali
-- youssef miftah 
-- abderrahim attou 
+- Votre Nom - Développeur Principal
+- Autres contributeurs...
 
